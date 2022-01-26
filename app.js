@@ -45,6 +45,15 @@ app.post('/', (req, res) => {
     
 })
 
+app.get('/:id', (req, res) => {
+  const urlId = req.params.id
+  ShortenUrl.findOne({ shortenUrl: urlId })
+    .then(data => {
+      res.redirect(data.originUrl)
+    })
+}
+)
+
 app.listen(port, () => {
   console.log(`Express is listening on http://localhost:${port}`)
 })

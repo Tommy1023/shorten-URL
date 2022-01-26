@@ -1,10 +1,25 @@
-<div class="result">
-  <h3>Success! Please use this link:</h3>
-  <a href="{{origin}}/{{shortenId}}">
-    <p id="generatedURL">{{origin}}/{{shortenId}}</p>
-  </a>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h3>Success! Please use this link:</h3>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <a href="{{origin}}/{{shortenId}}">
+        <h3 id="generatedURL">{{origin}}/{{shortenId}}</h3>
+      </a>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+      <div class="col-2 col-md-1 mt-2">
+        <button class="btn btn-primary" onclick="copy()">Copy</button>
+      </div>
+      <div class="col-2 col-md-1 mt-2">
+        <a href="http://localhost:3000/"><button class="btn btn-primary">Back</button></a>
+      </div>
+  </div>
 </div>
-<button class="copy" onclick="copy()">Copy</button>
 
 <script>
   function copy() {
