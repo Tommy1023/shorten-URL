@@ -14,7 +14,8 @@ function generateShortUrl(){
 }
 
 function randomUrl() {
-  collection = collection.concat(upperCaseLetters.split(''), lowerCaseLetters.split(''), numbers.split(''))
+  // collection = collection.concat(upperCaseLetters.split(''), lowerCaseLetters.split(''), numbers.split(''))
+  collection = numbers.split('')
   let randomCode = ''
   for (let i = 0; i < 1; i++) {
     randomCode += sample(collection)
