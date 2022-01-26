@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 
 const shortenUlrSchema = new Schema({
   originUrl: {
-    type: URL,
+    type: String,
     required: true
   },
   shortenUrl: {
