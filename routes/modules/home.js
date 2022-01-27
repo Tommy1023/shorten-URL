@@ -29,7 +29,14 @@ router.get('/:id', (req, res) => {
     .then(data => {
       res.redirect(data.originUrl)
     })
-}
+    .catch(err => {
+      console.log(err)
+      res.render(
+        'errorPage',
+        { status: 500, error: err.message }
+      )
+    })
+  }
 )
 
 module.exports = router
